@@ -1,5 +1,65 @@
+/* Palette */
+:root{
+--rich-black-1: #001011ff;
+--rich-black-2: #093a3eff;
+--verdigris: #3aafb9ff;
+--electric-blue: #64e9eeff;
+--pale-cerulean: #97c8ebff;
+}
+
 * {
     margin:0;
     padding:0;
     font-family:Arial, Helvetica, sans-serif;
+}
+
+html
+
+body{
+    /* background: #5f2c82;  fallback for old browsers */
+    /* background: -webkit-linear-gradient(#49a09d, #5f2c82); */
+    /* background: linear-gradient(#49a09d, #5f2c82); */
+    height:100vh;
+    color:black
+}
+
+#container{
+    display:flex;
+    border:1px solid red;
+    flex-flow:column wrap;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+}
+
+#header{
+    margin:5rem auto;
+    text-align:center;
+    font-size:1.5rem;
+}
+#game-content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#controls{
+    width:10vw;
+    height:30vw;
+    border:1px solid green;
+    margin-right:3rem;
+}
+
+#grid {
+    width:30vw;
+    height:30vw;
+    display:grid;
+    grid-template-columns: repeat(16, auto);
+    grid-template-rows: repeat(16, auto);
+
+}
+
+.grid-cell{
+    display:grid;
+    border-top:1px solid black;
+    border-left: 1px solid black;
 }
