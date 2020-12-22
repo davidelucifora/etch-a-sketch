@@ -10,17 +10,34 @@ Look into FlexBox just in case.
 */
 
 const gridContainer = document.getElementById('grid');
+let widthSlider = document.getElementById('width-slider');
+let gridSizeOutput = document.getElementById('grid-size');
+let generateBtn = document.getElementById('generate-grid');
 
-let width = 16;
+createGrid(16)
+
+widthSlider.addEventListener('input', function(){               // Dynamically display grid size when moving slider
+    let width = widthSlider.value;
+    gridSizeOutput.textContent = width;
+});
+
+generateBtn.addEventListener('click', function(){               // Launch createGrid() function when on click
+    width = widthSlider.value;
+    createGrid(width);
+});
 
 function createGrid(width){
+    // Clean Up previous Grid
+    gridContainer.textContent = '';
+    // Update Grid Template CSS values
+    gridContainer.style.gridTemplateColumns = `repeat(${width}, auto)`;
+    gridContainer.style.gridTemplateRows = `repeat(${width}, auto)`;   
+    // Create Grid 
     for (let i = 0; i < width * width; i++){
         let newCell = document.createElement('div')
         newCell.classList.add('grid-cell');
         gridContainer.appendChild(newCell);
     }
-    gridContainer.style.borderRight = '1px solid black';
-    gridContainer.style.borderBottom = '1px solid black';
+    gridContainer.style.borderRight = '1px solid var(--pale-cerulean)';
+    gridContainer.style.borderBottom = '1px solid var(--pale-cerulean)';
 }
-
-createGrid(width)

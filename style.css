@@ -7,36 +7,36 @@
 --pale-cerulean: #97c8ebff;
 }
 
+/* Reset */
 * {
     margin:0;
-    padding:0;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-html
+    padding:0;}
 
 body{
-    /* background: #5f2c82;  fallback for old browsers */
-    /* background: -webkit-linear-gradient(#49a09d, #5f2c82); */
-    /* background: linear-gradient(#49a09d, #5f2c82); */
     height:100vh;
-    color:black
+    color:var(--pale-cerulean);
+    font-family: 'Libre Franklin', sans-serif;
+    
 }
 
+/* Main Layout */
 #container{
     display:flex;
-    border:1px solid red;
     flex-flow:column wrap;
-    justify-content:center;
+    margin-top:3rem;
     align-items:center;
-    height:100%;
 }
 
 #header{
-    margin:5rem auto;
+    margin-top:3rem;
     text-align:center;
     font-size:1.5rem;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight:100;
 }
+
+/* Grid + Controls Styling */
+
 #game-content{
     display:flex;
     justify-content:center;
@@ -45,9 +45,26 @@ body{
 #controls{
     width:10vw;
     height:30vw;
-    border:1px solid green;
     margin-right:3rem;
+    border:1px solid var(--pale-cerulean);
+    border-radius:0.5rem;
+    display:flex;
+    flex-flow:column wrap;
+    align-items:center;
+    font-family:arial;
 }
+
+#controls h3{
+    text-align:center;
+    font-weight:800;
+    margin-top:0.5rem;
+}
+
+#controls > *{
+    margin-top:0.4rem;
+}
+
+/* Grid Styling */
 
 #grid {
     width:30vw;
@@ -60,6 +77,22 @@ body{
 
 .grid-cell{
     display:grid;
-    border-top:1px solid black;
-    border-left: 1px solid black;
+    border-top:1px solid var(--pale-cerulean);
+    border-left: 1px solid var(--pale-cerulean);
+}
+
+#width-slider, #generate-grid{
+    background-color:white;
+    border:1px solid var(--pale-cerulean);
+    color:var(--pale-cerulean);
+}
+
+#generate-grid{
+    padding:0.3rem 0.5rem;
+}
+
+#generate-grid:hover{
+    background-color:var(--pale-cerulean);
+    color:white;
+    transition:0.2s linear;
 }

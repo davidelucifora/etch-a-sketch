@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet">   
     <title>Etch A Sketch!</title>
 </head>
 <body>
 
+    <div id="header">
+        <h1>Etch a Sketch!</h1>
+    </div>
     <div id="container">
-        <div id="header">
-            <h1>Etch a Sketch!</h1>
-        </div>
         <div id="game-content">
             <div id="controls">
-
+                <label><strong><span>Grid Size: </span></strong><span id="grid-size">16</span></label>       
+                <input type="range" id="width-slider" min="16" max="96" step="16">
+                <button id="generate-grid">Generate</button>
             </div>
 
             <div id="grid">
