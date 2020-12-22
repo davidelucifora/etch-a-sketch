@@ -1,9 +1,6 @@
 /* Palette */
 :root{
---rich-black-1: #001011ff;
 --rich-black-2: #093a3eff;
---verdigris: #3aafb9ff;
---electric-blue: #64e9eeff;
 --pale-cerulean: #97c8ebff;
 }
 
@@ -13,7 +10,6 @@
     padding:0;}
 
 body{
-    height:100vh;
     color:var(--pale-cerulean);
     font-family: 'Libre Franklin', sans-serif;
     
@@ -73,8 +69,8 @@ h1{
 /* Grid Styling */
 
 #grid {
-    width:40vw;
-    height:40vw;
+    width:35vw;
+    height:35vw;
     display:grid;
     grid-template-columns: repeat(16, auto);
     grid-template-rows: repeat(16, auto);
@@ -135,7 +131,11 @@ footer{
 
 footer a{
     text-decoration:none;
-    color:var(--rich-black-2)
+    color:var(--rich-black-2);
+    margin-bottom:0;
+}
+footer a:visited{
+    color:black;
 }
 @media only screen and (max-width: 1080px) {
     #grid{
