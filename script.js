@@ -21,6 +21,8 @@ const eraseBtn = document.getElementById('erase-btn');
 
 let color = chooseColor()
 
+gridSizeOutput.innerHTML = widthSlider.value;
+
 createGrid(16);
  
 widthSlider.addEventListener('input', function(){               // Dynamically display grid size when moving slider
