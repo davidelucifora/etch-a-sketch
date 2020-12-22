@@ -16,9 +16,24 @@
     <div id="container">
         <div id="game-content">
             <div id="controls">
-                <label><strong><span>Grid Size: </span></strong><span id="grid-size">16</span></label>       
-                <input type="range" id="width-slider" min="16" max="96" step="16">
-                <button id="generate-grid">Generate</button>
+                <div class="control-group">
+                    <label><strong><span>Select Grid Size: </span></strong><span id="grid-size">16</span></label>       
+                    <input type="range" id="width-slider" min="16" max="96" step="16">
+                    <button id="generate-grid" class="button">Generate</button>
+                </div>
+                <div class="control-group">
+                    <strong><label for="color-picker">Choose a Color:</label></strong>
+                    
+
+
+
+                    <input type="color" id="color-picker" name="color-picker" value="#000000">
+                </div>
+                <div class="control-group">
+                    <button id="random-button" class="button">Random Colors</button>
+                    <button id="warm-button" class="button">Warm Colors</button>
+                    <button id="cold-button" class="button">Cold Colors</button>
+                </div>
             </div>
 
             <div id="grid">

@@ -10,11 +10,15 @@ Look into FlexBox just in case.
 */
 
 const gridContainer = document.getElementById('grid');
-let widthSlider = document.getElementById('width-slider');
-let gridSizeOutput = document.getElementById('grid-size');
-let generateBtn = document.getElementById('generate-grid');
+const widthSlider = document.getElementById('width-slider');
+const gridSizeOutput = document.getElementById('grid-size');
+const generateBtn = document.getElementById('generate-grid');
+const colorPicker = document.getElementById('color-picker'); 
 
-createGrid(16)
+createGrid(16);
+
+
+    
 
 widthSlider.addEventListener('input', function(){               // Dynamically display grid size when moving slider
     let width = widthSlider.value;
@@ -40,4 +44,12 @@ function createGrid(width){
     }
     gridContainer.style.borderRight = '1px solid var(--pale-cerulean)';
     gridContainer.style.borderBottom = '1px solid var(--pale-cerulean)';
+    let cell = document.querySelectorAll('.grid-cell').forEach(cell => {
+        cell.addEventListener('mouseover', fillCell)
+        });
+}
+
+function fillCell(){
+    let color = colorPicker.value;
+    this.style.backgroundColor = color;
 }

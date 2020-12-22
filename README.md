@@ -1,4 +1,4 @@
-# etch-a-sketch
+    # etch-a-sketch
 Etch a Sketch Project - DOM Manipulation Exercise
 
 The purpose of this Exercise is to Create a JS Version
