@@ -97,8 +97,15 @@ body{
     padding:0.3rem 0.5rem;
 }
 
-.button:hover{
+.button:hover, .color-btn-active{
     background-color:var(--pale-cerulean);
     color:white;
     transition:0.2s linear;
+}
+
+#erase-btn{
+    background-color:coral;
+    padding:0.3rem 0.5rem;
+    color:black;
+    border:1px solid var(--rich-black-2);
 }
