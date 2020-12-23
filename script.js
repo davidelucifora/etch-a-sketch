@@ -92,23 +92,21 @@ function createGrid(width){
 
 function chooseColor(){
     if (randomColorButton.classList.contains('color-btn-active')){
-        return `rgb(${Math.floor(Math.random()*255)},
-        ${Math.floor(Math.random()*255)},
-        ${Math.floor(Math.random()*255)})`;
+        return `rgb(${randomRange(0,255)},${randomRange(0,255)},${randomRange(0,255)})`
     }
     else if (coldColorButton.classList.contains('color-btn-active')){
-        return `rgb(${Math.floor(Math.random()*10)}, 
-        ${Math.floor(Math.random()*255)},
-        ${Math.floor(Math.random()* (255 - 200) + 200 )})`;
+        return `rgb(0,${randomRange(50,255)},${randomRange(50,255)})`
     }
     else if (warmColorButton.classList.contains('color-btn-active')){
-        return `rgb(${Math.floor(Math.random()* (255 - 200) + 200)}, 
-        ${Math.floor(Math.random()*255)},
-        ${Math.floor(Math.random()*10)}`;
+        return `rgb(${randomRange(255,255)},${randomRange(0,255 )},0)`
     }
     else {
         return colorPicker.value
     }
+}
+
+function randomRange(min, max){
+    return Math.floor(Math.random()*(max - min) + min)
 }
 
 
